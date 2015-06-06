@@ -60,5 +60,5 @@ Options:
 ```
 
 # Output 
-![alt tag](https://raw.github.com/sauravyadav/mongo-slowms/blob/master/output.png)
+![alt tag](https://raw.githubusercontent.com/sauravyadav/mongo-slowms/master/output.PNG)
 
