@@ -17,7 +17,7 @@ pip install fabric
 
 #Setup 
 - Add your mongo instance/Replica set details to ``env.roledefs`` in mongofab.py file like below.
-    -mongofab.py
+    - mongofab.py
 ```
       env.roledefs = {
           'PP': { 'hosts' : ['X.X.X.X'], 'rname' : 'PP' },
@@ -26,7 +26,7 @@ pip install fabric
       }
 ```
 - And change SMTP server’s setting in ``mongoslowlog.py`` according to your environment.
-  -mongoslowlog.py
+  - mongoslowlog.py
 
     ```
     MailFrom = devops@gmail.com
@@ -58,3 +58,7 @@ Options:
 1 0 * * * fab -R PROD1 -f /custom-scripts/slowlog/mongofab.py  getdata
 10 0 * * * python /custom-scripts/slowlog/mongoslowlog.py -f /tmp/PROD1/mongo-all.log -c 100 -i ops1@gmail.com -j dev1@gmail.com -d test
 ```
+
+# Output 
+![alt tag](https://raw.github.com/sauravyadav/mongo-slowms/blob/master/output.png)
+
