@@ -1,21 +1,21 @@
-## mongo-slowms
+### mongo-slowms
 Analyze cluster wide mongo slow queries using 10gen’s mtools and send report in CSV format to respective team members.
 It can be used for standalone mongo instance and for replica sets.
 
-#prerequisite
+##### prerequisite
 - python, python-pip, mtools, fabric 
 
-# Installation 
+##### Installation 
 ```
 yum install python python-pip
 pip install mtools
 pip install fabric
 ```
 
-# Scripts used 
+##### Scripts used 
 - mongofab.py, mongoslowlog.py
 
-#Setup 
+##### Setup 
 - Add your mongo instance/Replica set details to ``env.roledefs`` in mongofab.py file like below.
     - mongofab.py
 ```
@@ -59,6 +59,6 @@ Options:
 10 0 * * * python /custom-scripts/slowlog/mongoslowlog.py -f /tmp/PROD1/mongo-all.log -c 100 -i ops1@gmail.com -j dev1@gmail.com -d test
 ```
 
-# Output 
+##### Output 
 ![alt tag](https://raw.githubusercontent.com/sauravyadav/mongo-slowms/master/output.PNG)
 
